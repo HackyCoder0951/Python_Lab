@@ -1,8 +1,11 @@
-a = int(input("Enter the first number : "))
-b = int(input("Enter the second number : "))
+n = int(input("Enter the total number of elements to be added : ")) # total size of n numbers
 
-c = a + b # for using third variable
+sum = 0 # for value assign of addition of total n numbers
 
-print("Sum of a and b is : ",c) # using third variable
-
-print("Sum of a and b is : ",a + b) # without third variable
+for i in range(n):
+  
+    value = int(input(f"Enter {i+1} number : ")) # entering numbers according to total size of n numbers
+  
+    sum += value # addition of total n numbers
+  
+print("The Sum is",sum)
