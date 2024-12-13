@@ -4,11 +4,6 @@ from collections import Counter
 def add_numbers(numbers):
     return sum(numbers)
 
-def add_numbers_recursive(numbers):
-    if not numbers:
-        return 0
-    return numbers[0] + add_numbers_recursive(numbers[1:])
-
 # 2. Count Positive, Negative, and Zeros
 def count_numbers(numbers):
     positives = sum(1 for n in numbers if n > 0)
@@ -50,14 +45,14 @@ def separate_even_odd(numbers):
     odd = [n for n in numbers if n % 2 != 0]
     return even, odd
 
-def separate_even_odd_recursive(numbers, even=[], odd=[]):
+def even_odd_recursive(numbers, even=[], odd=[]):
     if not numbers:
         return even, odd
     if numbers[0] % 2 == 0:
         even.append(numbers[0])
     else:
         odd.append(numbers[0])
-    return separate_even_odd_recursive(numbers[1:], even, odd)
+    return even_odd_recursive(numbers[1:], even, odd)
 
 # 6. Factorial and Palindrome Check
 def factorial(n):
@@ -85,12 +80,6 @@ def draw_patterns(n):
     for i in range(1, n + 1):
         print(" " * (n - i) + "*" * i)
 
-def draw_patterns_recursive(n, row=1):
-    if row > n:
-        return
-    print(" " * (n - row) + "* " * row)
-    draw_patterns_recursive(n, row + 1)
-
 # 8. Find Maximum and Minimum in a List
 def find_max_min(numbers):
     return max(numbers), min(numbers)
@@ -109,12 +98,10 @@ def find_min_recursive(numbers):
 def max_of_three(a, b, c):
     return max(a, b, c)
 
-def max_of_three_recursive(a, b, c):
-    if a > b:
-        return max(a, c) if a > c else c
-    return max(b, c) if b > c else c
-
 # 10. Frequency Count of Each Element
+
+# from collections import Counter
+
 def frequency_count(numbers):
     return dict(Counter(numbers))
 
@@ -131,7 +118,6 @@ if __name__ == "__main__":
     # Example inputs
     numbers = [3, -2, 0, 5, 0, -1]
     print("Add Numbers:", add_numbers(numbers))
-    print("Recursive Add Numbers:", add_numbers_recursive(numbers))
     print("Count Numbers:", count_numbers(numbers))
     print("Recursive Count Numbers:", count_numbers_recursive(numbers))
     print("Reverse Number:", reverse_number(12345))
@@ -139,18 +125,15 @@ if __name__ == "__main__":
     print("Sum of Digits:", sum_of_digits(12345))
     print("Recursive Sum of Digits:", sum_of_digits_recursive(12345))
     print("Separate Even and Odd:", separate_even_odd(numbers))
-    print("Recursive Separate Even and Odd:", separate_even_odd_recursive(numbers))
+    print("Recursive Separate Even and Odd:", even_odd_recursive(numbers))
     print("Factorial:", factorial(5))
     print("Recursive Factorial:", factorial_recursive(5))
     print("Is Palindrome:", is_palindrome(121))
     print("Draw Patterns:")
     draw_patterns(5)
-    print("Recursive Draw Patterns:")
-    draw_patterns_recursive(5)
     print("Find Max and Min:", find_max_min(numbers))
     print("Recursive Max:", find_max_recursive(numbers))
     print("Recursive Min:", find_min_recursive(numbers))
     print("Max of Three Numbers:", max_of_three(3, 7, 5))
-    print("Recursive Max of Three Numbers:", max_of_three_recursive(3, 7, 5))
     print("Frequency Count:", frequency_count(numbers))
     print("Recursive Frequency Count:", frequency_count_recursive(numbers))
