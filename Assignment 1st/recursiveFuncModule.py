@@ -48,8 +48,14 @@ def reverse_number_recursive(number, rev=0):
         return rev
     return reverse_number_recursive(number // 10, rev * 10 + number % 10)
 
-def sum_of_digits(number):
-    return sum(int(digit) for digit in str(number))
+def sum_of_digits(num):
+    #temp = num # temporary variable for num value assign
+    n_sums = 0 # variable for sum of digit
+    while(num>0):
+        digit = num % 10 # calculates the last digit of number
+        n_sums += digit # addition of last digit obtained in uper line
+        num //= 10 # integer division of num by 10 so it will automatically remove the last digit of num
+    return n_sums
 
 def sum_of_digits_recursive(number):
     if number == 0:
