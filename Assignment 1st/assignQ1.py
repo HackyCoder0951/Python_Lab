@@ -1,13 +1,27 @@
 # Q.1 Sum of N natural numbers ?
 
-n = int(input("Enter the total number of elements to be added : ")) # total size of n numbers
+from recursiveFuncModule import add_numbers
 
-sum = 0 # for value assign of addition of total n numbers
+from recursiveFuncModule import add_numbers_recursive
+
+# total size of n numbers
+n = int(input("Enter the total number of elements to be added : ")) 
+
+# for value assign of addition of total n numbers
+sum_num = 0 
 
 for i in range(n):
+    
+    # entering numbers according to total size of n numbers
+    i = int(input(f"Enter {i+1} number : ")) 
+    
+    # addition of total n numbers
+    sum_num += i 
   
-    value = int(input(f"Enter {i+1} number : ")) # entering numbers according to total size of n numbers
-  
-    sum += value # addition of total n numbers
-  
-print("The Sum is",sum)
+print("Add Numbers using normal method :",sum_num)
+
+print("\nAddition of Numbers using function is :")
+print("Add Numbers using function :", add_numbers(n))
+
+print("\nAddition of Numbers using recursive function is :")
+print("Add Numbers using recurve function :", add_numbers_recursive(n))
