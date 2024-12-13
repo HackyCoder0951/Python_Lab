@@ -1,3 +1,5 @@
+# Q.1 Sum of N natural numbers ?
+
 n = int(input("Enter the total number of elements to be added : ")) # total size of n numbers
 
 sum = 0 # for value assign of addition of total n numbers

@@ -1,3 +1,5 @@
+# Q.2 Count frequency of positive, negative and zero numbers ?
+
 # creating list
 num_list = [1,2,4.5,-5,-67,8,0,0.0,-4.4,5,-3.3]
 

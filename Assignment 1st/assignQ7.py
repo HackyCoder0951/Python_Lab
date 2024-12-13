@@ -1,4 +1,4 @@
-# Python Script to draw the following patterns
+# Q.7 Python Script to draw the following patterns
 #      *           *                *
 #     * *          **              **
 #    * * *         ***            ***

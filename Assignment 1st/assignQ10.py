@@ -1,3 +1,5 @@
+# Q.10 count the frequency of the element in the list ?
+
 # Input list of elements
 input_list = [
     int(x) for x in input("\n Enter elements of the list (separated by spaces): ").split()]

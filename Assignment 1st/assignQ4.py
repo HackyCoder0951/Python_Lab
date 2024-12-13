@@ -1,3 +1,5 @@
+# Q.4 sum of digits of a number ?
+
 num = int(input("Enter a number : ")) 
 
 temp = num # temporary variable for num value assign

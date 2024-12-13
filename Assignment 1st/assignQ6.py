@@ -1,3 +1,5 @@
+# Q.6 find factorial & check palindrome numbers?
+
 num = int(input("Enter Number you want to check : "))
 
 ##### Factorial Number #####

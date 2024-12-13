@@ -1,3 +1,5 @@
+# Q.5 even or odd from the list ?
+
 n = int(input("Enter the total number of element in the list : "))
 
 num_list = [] # number list

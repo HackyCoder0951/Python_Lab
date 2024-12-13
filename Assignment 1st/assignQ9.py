@@ -1,3 +1,5 @@
+# Q.9 find maximum of the three numbers ?
+
 # Ask the user how many numbers they want to enter
 nums = int(input("How many numbers do you want to input? "))
 
