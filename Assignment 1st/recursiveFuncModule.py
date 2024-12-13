@@ -144,6 +144,18 @@ def get_user_input():
             print("Invalid input. Please enter a valid number.")
     return num_list
 
+def get_number_list(n):
+    """
+    Collects a list of numbers from the user.
+    :param n: Total number of elements in the list
+    :return: A list of numbers entered by the user
+    """
+    num_list = []
+    for i in range(n):
+        value = int(input(f"Enter element {i + 1}: "))
+        num_list.append(value)
+    return num_list
+
 # Example usage of functions
 if __name__ == "__main__":
     num_list=[]
