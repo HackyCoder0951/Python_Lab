@@ -91,12 +91,15 @@ def is_palindrome(number):
     return str(number) == str(number)[::-1]
 
 def draw_patterns(n):
+    print("\nPattern 1 using function")
     for i in range(1, n + 1):
         print(" " * (n - i) + "* " * i)
     print()
+    print("\nPattern 2 using function")
     for i in range(1, n + 1):
         print("*" * i)
     print()
+    print("\nPattern 3 using function")
     for i in range(1, n + 1):
         print(" " * (n - i) + "*" * i)
 
@@ -114,18 +117,49 @@ def find_min_recursive(numbers):
     return min(numbers[0], find_min_recursive(numbers[1:]))
 
 def max_of_three(a, b, c):
-    return max(a, b, c)
+    """Returns the maximum of three numbers."""
+    if a > b and a > c:
+        return a
+    elif b > a and b > c:
+        return b
+    else:
+        return c
 
+# Function to count frequency using iteration
 def frequency_count(numbers):
-    return dict(Counter(numbers))
+    """
+    Counts the frequency of each element in the list using iteration.
+    Returns a dictionary with the frequency of each element.
+    """
+    frequency = {}
+    for element in numbers:
+        if element in frequency:
+            frequency[element] += 1
+        else:
+            frequency[element] = 1
+    return frequency
 
-def frequency_count_recursive(numbers, freq=None):
-    if freq is None:
-        freq = {}
-    if not numbers:
-        return freq
-    freq[numbers[0]] = freq.get(numbers[0], 0) + 1
-    return frequency_count_recursive(numbers[1:], freq)
+# Function to count frequency using recursion
+def frequency_count_recursive(numbers, frequency=None):
+    """
+    Counts the frequency of each element in the list using recursion.
+    Returns a dictionary with the frequency of each element.
+    """
+    if frequency is None:
+        frequency = {}   
+    if not numbers:  # Base case: if the list is empty, return the frequency dictionary
+        return frequency
+   
+    # Get the first element in the list
+    element = numbers[0]    
+    # Update the frequency dictionary
+    if element in frequency:
+        frequency[element] += 1
+    else:
+        frequency[element] = 1
+ 
+    # Recurse with the rest of the list
+    return frequency_count_recursive(numbers[1:], frequency)
 
 # Input handling
 def get_user_input():
@@ -159,4 +193,3 @@ def get_number_list(n):
 # Example usage of functions
 if __name__ == "__main__":
     num_list=[]
-    # Taking input from the user
