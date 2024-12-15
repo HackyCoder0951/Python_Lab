@@ -11,7 +11,8 @@ while(num1>0):
         
 print("The sum of digits of ",temp,"is",n_sums,"\n")
 
-num2 = int(input("Enter a number : ")) 
+print("Sum of digits using function & recursive function :\n")
+num2 = int(input("\nEnter a number : ")) 
 # Calculate the sum of digits iteratively
 iterative_sum = sum_of_digits(num2)
 print(f"The sum of digits of {temp} using the iterative function is: {iterative_sum}\n")

@@ -18,8 +18,10 @@ def count_numbers(numbers):
     """
     Counts the number of positive, negative, and zero values in the list.
     """
-    positives = sum(1 for n in numbers if n > 0) # using generator expression concepts
-    negatives = sum(1 for n in numbers if n < 0) # For every n that satisfies the condition n > 0, the value 1 is produced.
+    # using generator expression concepts
+    positives = sum(1 for n in numbers if n > 0) 
+    # For every n that satisfies the condition n > 0, the value 1 is produced.
+    negatives = sum(1 for n in numbers if n < 0) 
     zeros = sum(1 for n in numbers if n == 0)
     return positives, negatives, zeros
 
