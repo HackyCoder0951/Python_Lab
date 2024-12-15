@@ -1,7 +1,6 @@
 # Q.8 max or min from the list ?
 
 from recursiveFuncModule import get_number_list,find_max_min,find_max_recursive,find_min_recursive
-
 n=int(input("Enter the total number of element in the list : "))
 if(n<=0):
     print("The list is empty, Please enter a valid number greater than 0")
@@ -14,9 +13,9 @@ else:
             maximum=num_list[i]
         if(minimum>num_list[i]):
             minimum=num_list[i]    
-    print("List of elements :",num_list,"\n")  
-    print("Maximum value from the list :",maximum,"")
-    print("Minimum value from the list :",minimum,"\n")   
-    print("Minimum & Maximum value from the list using function:",find_max_min(num_list),"\n")
-    print("Maximum value from the list using recursive function :",find_max_recursive(num_list),"\n")
-    print("Minimum value from the list using recursivefunction :",find_min_recursive(num_list),"\n")
+print("List of elements :",num_list,"\n")  
+print("Maximum value from the list :",maximum,"")
+print("Minimum value from the list :",minimum,"\n")   
+print("Minimum & Maximum value from the list using function:",find_max_min(num_list),"\n")
+print("Maximum value from the list using recursive function :",find_max_recursive(num_list),"\n")
+print("Minimum value from the list using recursivefunction :",find_min_recursive(num_list),"\n")

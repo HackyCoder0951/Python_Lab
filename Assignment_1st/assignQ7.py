@@ -6,16 +6,13 @@
 #  * * * * *       *****        *****
 
 from recursiveFuncModule import draw_patterns
-
 print("\nPattern 1")
 rows = int(input("\nEnter the rows you want print : "))
-
 for i in range(1, rows + 1):
     #Print Spaces to align the start to the right
     print(" " * (rows - i),end=" ")
     #
     print("* " * i)
-
 print("\nPattern 2\n")
 for i in range(1, rows + 1):
     #
@@ -25,8 +22,6 @@ print("\nPattern 3\n")
 for i in range(1, rows + 1):
     #
     print("  " * (rows - i),end="")
-
     print("* " * i)
-
 print("\nDrawing  Patterns function:")
 draw_patterns(rows)
