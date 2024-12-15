@@ -93,31 +93,18 @@ def is_palindrome(number):
 def is_palindrome_recursive(n, temp=None):
     # Initialize the temp variable on the first call
     if temp is None:
-        temp = n
-    
+        temp = n   
     # Base case: If n is reduced to 0, stop the recursion
     if n == 0:
-        return temp == 0
-    
+        return temp == 0   
     # Get the last digit of the number and compare it with the first digit
     last_digit = n % 10
     first_digit = temp % 10
-
     # If the digits do not match, it's not a palindrome
     if last_digit != first_digit:
-        return False
-    
+        return False  
     # Remove the first and last digit and call the function recursively
     return is_palindrome_recursive(n // 10, temp // 10)
-
-# Input from the user
-num = int(input("Enter a number to check if it is a palindrome: "))
-
-# Call the recursive function
-if is_palindrome_recursive(num):
-    print(f"{num} is a palindrome number.")
-else:
-    print(f"{num} is not a palindrome number.")
 
 def draw_patterns(n):
     print("\nPattern 1 using function")
@@ -177,8 +164,7 @@ def frequency_count_recursive(numbers, frequency=None):
     if frequency is None:
         frequency = {}   
     if not numbers:  # Base case: if the list is empty, return the frequency dictionary
-        return frequency
-   
+        return frequency  
     # Get the first element in the list
     element = numbers[0]    
     # Update the frequency dictionary
@@ -186,7 +172,6 @@ def frequency_count_recursive(numbers, frequency=None):
         frequency[element] += 1
     else:
         frequency[element] = 1
- 
     # Recurse with the rest of the list
     return frequency_count_recursive(numbers[1:], frequency)
 

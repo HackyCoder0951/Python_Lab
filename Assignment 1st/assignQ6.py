@@ -1,6 +1,6 @@
 # Q.6 find factorial & check palindrome numbers?
 
-from recursiveFuncModule import factorial,factorial_recursive,is_palindrome
+from recursiveFuncModule import factorial,factorial_recursive,is_palindrome,is_palindrome_recursive
 num = int(input("Enter Number you want to check : "))
 
 ##### Factorial Number #####
@@ -25,7 +25,7 @@ else :
   print(f"{num} is not a Palindrome number.")
 
 
-##### Factorial Calculation #####
+print("Factorial Calculation using Iterative & Recursive Function")
 # Using the iterative `factorial` function
 iterative_fact = factorial(num)
 print(f"The factorial of {num} (Iterative) is: {iterative_fact}")
@@ -34,9 +34,16 @@ print(f"The factorial of {num} (Iterative) is: {iterative_fact}")
 recursive_fact = factorial_recursive(num)
 print(f"The factorial of {num} (Recursive) is: {recursive_fact}")
 
-##### Palindrome Check #####
+print("Palindrome Check using Iterative & Recursive Function")
 # Using the `is_palindrome` function
 if is_palindrome(num):
     print(f"{num} is a Palindrome number.")
 else:
     print(f"{num} is not a Palindrome number.")
+    
+# Using the recursive `is_palindrome_recursive` function
+# Call the recursive function
+if is_palindrome_recursive(num):
+    print(f"{num} is a palindrome number.")
+else:
+    print(f"{num} is not a palindrome number.")
