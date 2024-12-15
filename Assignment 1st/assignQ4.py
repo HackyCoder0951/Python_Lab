@@ -5,9 +5,9 @@ num1 = int(input("Enter a number : "))
 temp = num1 # temporary variable for num value assign
 n_sums = 0 # variable for sum of digit
 while(num1>0):
-        digit = num1 % 10 # calculates the last digit of number
-        n_sums += digit # addition of last digit obtained in uper line
-        num1 //= 10 # integer division of num by 10 so it will automatically remove the last digit of num
+   digit = num1 % 10 # calculates the last digit of number
+   n_sums += digit # addition of last digit obtained in uper line
+   num1 //= 10 # integer division of num by 10 so it will automatically remove the last digit of num
         
 print("The sum of digits of ",temp,"is",n_sums,"\n")
 

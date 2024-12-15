@@ -1,8 +1,6 @@
 # Q.1 Sum of N natural numbers ?
 
-from recursiveFuncModule import add_numbers
-
-from recursiveFuncModule import add_numbers_recursive
+from recursiveFuncModule import add_numbers,add_numbers_recursive
 
 # total size of n numbers
 n = int(input("Enter the total number of elements to be added : ")) 
@@ -20,8 +18,6 @@ for i in range(n):
   
 print("Add Numbers using normal method :",sum_num)
 
-print("\nAddition of Numbers using function is :")
 print("Add Numbers using function :", add_numbers(n))
 
-print("\nAddition of Numbers using recursive function is :")
 print("Add Numbers using recurve function :", add_numbers_recursive(n))

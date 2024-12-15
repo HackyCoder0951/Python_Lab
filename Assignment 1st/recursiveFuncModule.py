@@ -1,17 +1,22 @@
+global_list = []
 def add_numbers(num):
+    global global_list
+    global_list.clear()
     t_sum = 0
     for i in range(num):
         value = int(input(f"Enter {i+1} element : "))
-        num_list.append(value)  # assigning values into num_list[]
+        global_list.append(value)  # assigning values into global_list[]
         t_sum += value
     return t_sum
 
 def add_numbers_recursive(rec_num, index=0):
+    global global_list
+    global_list.clear()
     if index >= rec_num:  # Base case: if index is equal to num, return 0
         return 0
     else:
         value = int(input(f"Enter {index + 1} element: "))
-        num_list.append(value)  # Assigning values into num_list[]
+        global_list.append(value)  # Assigning values into global_list[]
         return value + add_numbers_recursive(rec_num, index + 1)  # Recursive call
 
 def count_numbers(numbers):
@@ -49,7 +54,6 @@ def reverse_number_recursive(number, rev=0):
     return reverse_number_recursive(number // 10, rev * 10 + number % 10)
 
 def sum_of_digits(num):
-    #temp = num # temporary variable for num value assign
     n_sums = 0 # variable for sum of digit
     while(num>0):
         digit = num % 10 # calculates the last digit of number
@@ -157,10 +161,6 @@ def frequency_count(numbers):
 
 # Function to count frequency using recursion
 def frequency_count_recursive(numbers, frequency=None):
-    """
-    Counts the frequency of each element in the list using recursion.
-    Returns a dictionary with the frequency of each element.
-    """
     if frequency is None:
         frequency = {}   
     if not numbers:  # Base case: if the list is empty, return the frequency dictionary
@@ -180,17 +180,18 @@ def get_user_input():
     """
     Collects numbers from the user until 'd' is entered.
     """
-    num_list = []
+    global global_list
+    global_list.clear()
     print("Enter numbers to add to the list. Type 'd' to finish.")
     while True:
         user_input = input("Enter a number (or 'd' to finish): ").strip().lower()
         if user_input == 'd':
             break
         if user_input.replace('.', '', 1).replace('-', '', 1).isdigit():
-            num_list.append(float(user_input) if '.' in user_input else int(user_input))
+            global_list.append(float(user_input) if '.' in user_input else int(user_input))
         else:
             print("Invalid input. Please enter a valid number.")
-    return num_list
+    return global_list
 
 def get_number_list(n):
     """
@@ -198,12 +199,12 @@ def get_number_list(n):
     :param n: Total number of elements in the list
     :return: A list of numbers entered by the user
     """
-    num_list = []
+    global global_list
+    global_list.clear()
     for i in range(n):
         value = int(input(f"Enter element {i + 1}: "))
-        num_list.append(value)
-    return num_list
+        global_list.append(value)
+    return global_list
 
-# Example usage of functions
 if __name__ == "__main__":
-    num_list=[]
+    get_user_input()
