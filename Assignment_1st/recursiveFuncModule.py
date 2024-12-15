@@ -184,7 +184,7 @@ def get_user_input():
     global_list.clear()
     print("Enter numbers to add to the list. Type 'd' to finish.")
     while True:
-        user_input = input("Enter a number (or 'd' to finish): ").strip().lower()
+        user_input = input("Enter a number : ").strip().lower()
         if user_input == 'd':
             break
         if user_input.replace('.', '', 1).replace('-', '', 1).isdigit():
@@ -207,7 +207,7 @@ def get_number_list(n):
         global_list.append(value)
     return global_list
 
-#For Example : execute this as seperate scipt
+#For Example : execute this script directly
 if __name__ == "__main__":
     get_user_input()
     print("\nInputed List : ->",global_list,"\n")
