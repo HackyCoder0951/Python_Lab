@@ -175,7 +175,7 @@ def frequency_count_recursive(numbers, frequency=None):
     # Recurse with the rest of the list
     return frequency_count_recursive(numbers[1:], frequency)
 
-# Input handling
+# List Input handling without defining parameters inside function
 def get_user_input():
     """
     Collects numbers from the user until 'd' is entered.
@@ -193,6 +193,7 @@ def get_user_input():
             print("Invalid input. Please enter a valid number.")
     return global_list
 
+# List Input handling with defining parameters inside function
 def get_number_list(n):
     """
     Collects a list of numbers from the user.
@@ -206,5 +207,7 @@ def get_number_list(n):
         global_list.append(value)
     return global_list
 
+#For Example : execute this as seperate scipt
 if __name__ == "__main__":
     get_user_input()
+    print("\nInputed List : ->",global_list,"\n")

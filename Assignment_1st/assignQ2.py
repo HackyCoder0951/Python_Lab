@@ -6,19 +6,6 @@ from recursiveFuncModule import get_user_input, count_numbers, count_numbers_rec
 # Get user input for the list of numbers
 num_list = get_user_input()
 
-# Display the list to the user
-print("\nYou entered:", num_list)
-
-# Count numbers using the iterative function
-print("\nCounting numbers using the iterative function:")
-positives, negatives, zeros = count_numbers(num_list)
-print(f"Positives: {positives}, Negatives: {negatives}, Zeroes: {zeros}")
-
-# Count numbers using the recursive function
-print("\nCounting numbers using the recursive function:")
-positives, negatives, zeros = count_numbers_recursive(num_list)
-print(f"Positives: {positives}, Negatives: {negatives}, Zeroes: {zeros}")
-
 # Optional additional method using a loop
 print("\nCounting numbers using a manual loop:")
 positives = 0
@@ -34,11 +21,19 @@ for num in num_list:
     else:
         zeroes += 1
 
+# Display the list to the user
+print("\nEntered List Elements:", num_list)
 print(f"Positives: {positives}, Negatives: {negatives}, Zeroes: {zeroes}")
 
+# Count numbers using the iterative function
+print("\nCounting numbers using the iterative function:")
+positives, negatives, zeros = count_numbers(num_list)
+print(f"Positives: {positives}, Negatives: {negatives}, Zeroes: {zeros}")
 
-# Alternatively, you can use the recursive function:
-# positives, negatives, zeros = count_numbers_recursive(nul_list)
+# Count numbers using the recursive function
+print("\nCounting numbers using the recursive function:")
+positives, negatives, zeros = count_numbers_recursive(num_list)
+print(f"Positives: {positives}, Negatives: {negatives}, Zeroes: {zeros}","\n")
 
 # the f in print is f-string formatting ( formatted string literal )
 # And f-string allows you to embeded expressions inside string literals,
