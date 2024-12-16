@@ -1,4 +1,5 @@
 global_list = []
+global_dictionary = {}
 def add_numbers(num):
     global global_list
     global_list.clear()
@@ -143,23 +144,23 @@ def max_of_three(a, b, c):
 
 # Function to count frequency using iteration
 def frequency_count(numbers):
-    """
-    Counts the frequency of each element in the list using iteration.
-    Returns a dictionary with the frequency of each element.
-    """
-    frequency = {}
+    global global_dictinary
+    global_dictinary.clear()
     for element in numbers:
-        if element in frequency:
-            frequency[element] += 1
+        if element in global_dictinary:
+            global_dictinary[element] += 1
         else:
-            frequency[element] = 1
-    return frequency
+            global_dictinary[element] = 1
+    return global_dictinary
 
 # Function to count frequency using recursion
 def frequency_count_recursive(numbers, frequency=None):
+    global global_dictinary
+    global_dictinary.clear()
     if frequency is None:
         frequency = {}   
     if not numbers:  # Base case: if the list is empty, return the frequency dictionary
+        global_dictinary = frequency
         return frequency  
     # Get the first element in the list
     element = numbers[0]    
@@ -170,6 +171,20 @@ def frequency_count_recursive(numbers, frequency=None):
         frequency[element] = 1
     # Recurse with the rest of the list
     return frequency_count_recursive(numbers[1:], frequency)
+
+def get_user_input_dict():
+    global global_dictinary
+    global_dictinary.clear()
+    print("Enter key-value pairs to add to the dictionary. Type 'd' to finish.")
+    while True:
+        user_input = input("Enter key (or 'd' to finish): ").strip().lower()
+        if user_input == 'd':
+            break
+        key = user_input
+        value = input(f"Enter value for key '{key}': ").strip()
+        global_dictinary[key] = value
+    return global_dictinary
+
 
 # List Input handling without defining parameters inside function
 def get_user_input():
