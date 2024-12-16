@@ -1,11 +1,10 @@
-# Q.2 Count frequency of positive, negative and zero numbers ?
+# Q.2 Count frequency of positive, negative and zero numbers in a given list of numbers?
 
-# Importing all functions from the module
 from recursiveFuncModule import get_user_input, count_numbers, count_numbers_recursive
 # Get user input for the list of numbers
 num_list = get_user_input()
 # Optional additional method using a loop
-print("\nCounting numbers using a manual loop:")
+print("\nCounting numbers using a manual loop :")
 positives = 0
 negatives = 0
 zeroes = 0
@@ -18,16 +17,16 @@ for num in num_list:
     else:
         zeroes += 1
 # Display the list to the user
-print("\nEntered List Elements:", num_list)
-print(f"Positives: {positives}, Negatives: {negatives}, Zeroes: {zeroes}")
+print("\nEntered List Elements :", num_list)
+print(f"Positives : {positives}, Negatives : {negatives}, Zeroes : {zeroes}")
 # Count numbers using the iterative function
-print("\nCounting numbers using the iterative function:")
+print("\nCounting numbers using the iterative function :")
 positives, negatives, zeros = count_numbers(num_list)
-print(f"Positives: {positives}, Negatives: {negatives}, Zeroes: {zeros}")
+print(f"Positives : {positives}, Negatives : {negatives}, Zeroes : {zeros}")
 # Count numbers using the recursive function
-print("\nCounting numbers using the recursive function:")
+print("\nCounting numbers using the recursive function :")
 positives, negatives, zeros = count_numbers_recursive(num_list)
-print(f"Positives: {positives}, Negatives: {negatives}, Zeroes: {zeros}","\n")
+print(f"Positives : {positives}, Negatives : {negatives}, Zeroes : {zeros}","\n")
 
 # the f in print is f-string formatting ( formatted string literal )
 # And f-string allows you to embeded expressions inside string literals,

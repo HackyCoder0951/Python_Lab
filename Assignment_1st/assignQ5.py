@@ -14,13 +14,15 @@ for i in num_list:
 print("List of All Numbers :",num_list)
 print("List of Even Numbers :",even_list)
 print("List of Odd Numbers :",odd_list,"\n")
+
 # Use the `separate_even_odd` function
 even_list, odd_list = separate_even_odd(num_list)
-# Use the `even_odd_recursive` function
-even_recursive, odd_recursive = even_odd_recursive(num_list)
 # Output the results
 print("\nList of All Numbers From Module:", num_list)
 print("List of Even Numbers (Iterative):", even_list)
 print("List of Odd Numbers (Iterative):", odd_list)
+
+# Use the `even_odd_recursive` function
+even_recursive, odd_recursive = even_odd_recursive(num_list)
 print("\nList of Even Numbers (Recursive):", even_recursive)
 print("List of Odd Numbers (Recursive):", odd_recursive)
