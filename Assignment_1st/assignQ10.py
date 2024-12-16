@@ -4,7 +4,7 @@ from recursiveFuncModule import frequency_count,frequency_count_recursive
 # Input list of elements
 input_list = [int(x) for x in input("\n Enter elements of the list (separated by spaces): ").split()]
 # Dictionary to store frequency count of each element
-frequency = {}
+frequency = get_user_input_dict()
 # Loop through each element in the list and count the occurrences
 for element in input_list:
     if element in frequency:
