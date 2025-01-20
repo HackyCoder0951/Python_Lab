@@ -1,9 +1,3 @@
-a = int(input())
-b = int(input())
-#c = int(input())
-
-if (a > b):
-    print("A is Greater")
-else:
-    print("Enter correct number")
-    
+r = range(10,20,2)
+for i in r :
+    print(i)
