@@ -1,0 +1,26 @@
+def is_valid_password(password):
+    # Check the length of the password
+    if len(password) < 8:
+        return "Password must be at least 8 characters long."
+    
+    # Flags for validation
+    has_uppercase = any(char.isupper() for char in password)
+    has_lowercase = any(char.islower() for char in password)
+    has_digit = any(char.isdigit() for char in password)
+    
+    # Validate all requirements
+    if not has_uppercase:
+        return "Password must contain at least one uppercase letter."
+    if not has_lowercase:
+        return "Password must contain at least one lowercase letter."
+    if not has_digit:
+        return "Password must contain at least one numeric digit."
+    
+    return "Password is valid!"
+
+# Input password from user
+password = input("Enter your password: ")
+
+# Check and display the result
+result = is_valid_password(password)
+print(result)
