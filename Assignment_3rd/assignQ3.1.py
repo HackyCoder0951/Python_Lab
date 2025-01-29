@@ -17,14 +17,14 @@ def student_mark():
         student_mark()  # Retry on invalid input
         return
     else:
-        if eng > 100 or math > 100 or science > 100 or hindi > 100:
-            print("Invalid Marks. Marks must not exceed 100.\n")
+        if eng > 100 or math > 100 or science > 100 or hindi > 100 :
+            print("Error : Check the mark entry!\n")
             student_mark()  # Retry on invalid marks
         else:
             std_per = (eng + math + science + hindi) / 4
-            if eng < 40 or math < 40 or science < 40 or hindi < 40:
-                std_remark = "FAIL"
-            else:
+            if 0 < std_per < 45 :
+                std_remark = "Failure"
+            else :
                 std_remark = "PASS"
             student_result()
 

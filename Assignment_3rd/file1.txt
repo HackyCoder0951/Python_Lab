@@ -1,0 +1,11 @@
+pythons is a programming langauge. 
+that is a open source language also
+
+
+
+A file operation starts with the file opening. 
+At first, open the File then Python will start the operation. 
+File opening is done with the open() function in Python. 
+This function will accepts two arguments, file name and access mode in which the file is accessed. 
+When we use the open() function, that time we must be specified the mode for which the File is opening. 
+The function returns a file object which can be used to perform various operations like reading, writing, etc.
