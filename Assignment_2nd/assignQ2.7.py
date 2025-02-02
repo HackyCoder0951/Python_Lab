@@ -1,3 +1,5 @@
+# Q 2.7 - WAP to implement merge sort.
+
 # Function to implement merge sort
 def merge_sort(arr):
     if len(arr) > 1:

@@ -1,4 +1,10 @@
-# Q 2.2 - 
+# Q 2.2 - WAP that accepts a string to setup a passwords. 
+# Your entered password must meet the following requirements :
+    # 1 - The password must be at least 8 characters long.
+    # 2 - The password must contain at least one uppercase letter.
+    # 3 - The password must contain at least one lowercase letter.
+    # 4 - The password must contain at least one numeric digit.
+    # 5 - The password must contain at least one special symbol (e.g., $, @, #, %).
 
 # Function for password validation
 def is_valid_password(password):

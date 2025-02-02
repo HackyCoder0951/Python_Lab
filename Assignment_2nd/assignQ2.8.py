@@ -1,3 +1,5 @@
+# Q 2.8 - WAP to implement quick sort.
+
 # Function to implement quick sort
 def quick_sort(arr):
     if len(arr) <= 1:

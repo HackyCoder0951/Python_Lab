@@ -1,3 +1,5 @@
+# Q 2.4 - WAP to implement binary search.
+
 # Function to implement binary search
 def binary_search(arr, target):
     low, high = 0, len(arr) - 1

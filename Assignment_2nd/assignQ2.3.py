@@ -1,3 +1,9 @@
+# Q 2.3 - WPA to perform the following operations in tuples :
+    # 1 - Find the repeated items in the tuple.
+    # 2 - Check if a given element exists in the tuple.
+    # 3 - Remove a given element from the tuple.
+    # 4 - Convert the tuple to a dictionary.
+
 # Define a sample tuple
 sample_tuple = (1, 2, 3, 2, 4, 5, 3, 6, 1, 7)
 

@@ -1,3 +1,5 @@
+# Q 2.6 - WAP to program to implement selection sort.
+
 # Function to implement selection sort
 def selection_sort(arr):
     for i in range(len(arr)):

@@ -1,3 +1,5 @@
+# Q 2.5 - WAP to implement linear search.
+
 # Function to implement linear search
 def linear_search(arr, target):
     for i, value in enumerate(arr):

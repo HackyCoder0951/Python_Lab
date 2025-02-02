@@ -1,3 +1,5 @@
+# Q 2.9 - WAP to implement shell sort.
+
 # Function to implement shell sort
 def shell_sort(arr):
     gap = len(arr) // 2

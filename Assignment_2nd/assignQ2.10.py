@@ -1,3 +1,5 @@
+# Q 2.10 - WAP of menu driven of perform matrix addition, substraction and multiplication.
+
 # Function for matrix addition
 def matrix_addition(matrix1, matrix2):
     rows, cols = len(matrix1), len(matrix1[0])
