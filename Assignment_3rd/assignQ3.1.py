@@ -1,3 +1,13 @@
+# Q 3.1 - Q.1 Write a python program to calculate the result of the students studying in Jampeling Central School. 
+# Save your file as “Student Result Program”. The program should have three functions
+# defined: student_biodata(), student_mark(), student_remark(), and student_result(). 
+# The program should accept the name of the student, class, section, and marks for any five subjects from the user.
+# Calculate the percentage of the student and generate a remark according to the following conditions:
+    # If a student’s percentage falls below 0 or above 100, generate an error message, ”Error: Check the mark entry!”
+    # If a student’s percentage falls between 0 and 45, they are considered a failure.
+    # If a student’s percentage falls between 45 and 100, they are considered a pass.
+    # Display a result in such a way that the student’s name, class, section, percentages, and remark are generated.
+
 def student_biodata():
     global std_name, std_class, std_section
     std_name = input("Enter your name: ")
