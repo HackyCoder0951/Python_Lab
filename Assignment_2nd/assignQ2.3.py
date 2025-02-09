@@ -5,7 +5,7 @@
     # 4 - Convert the tuple to a dictionary.
 
 # Define a sample tuple
-sample_tuple = (1, 2, 3, 2, 4, 5, 3, 6, 1, 7)
+tpl = (1, 2, 3, 2, 4, 5, 3, 6, 1, 7)
 
 # Find repeated items
 def find_repeated_items(tpl):
@@ -32,20 +32,20 @@ def tuple_to_dict(tpl):
     return dict(zip(tpl[::2], tpl[1::2]))
 
 # Perform operations
-print("Original tuple:", sample_tuple)
+print("Original tuple:", tpl)
 
 # Find repeated items
-repeated_items = find_repeated_items(sample_tuple)
+repeated_items = find_repeated_items(tpl)
 print("Repeated items:", repeated_items)
 
 # Check if an element exists
-element = 3
-exists = element_exists(sample_tuple, element)
+element = int(input("Enter element to search : "))
+exists = element_exists(tpl, element)
 print(f"Element {element} exists in tuple:", exists)
 
 # Remove an item from the tuple
-item_to_remove = 2
-updated_tuple = remove_item(sample_tuple, item_to_remove)
+item_to_remove = int(input("Remove item from tuple :"))
+updated_tuple = remove_item(tpl, item_to_remove)
 print("Tuple after removing item:", updated_tuple)
 
 # Convert tuple to dictionary

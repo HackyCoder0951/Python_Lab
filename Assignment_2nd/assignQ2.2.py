@@ -21,11 +21,11 @@ def is_valid_password(password):
     # Validate all requirements
     if not has_uppercase:
         return "Password must contain at least one uppercase letter."
-    if not has_lowercase:
+    elif not has_lowercase:
         return "Password must contain at least one lowercase letter."
-    if not has_digit:
+    elif not has_digit:
         return "Password must contain at least one numeric digit."
-    if not has_symbol:
+    elif not has_symbol:
         return "Password must contain at least one special symbols."
     else :
         return "Password is valid!"

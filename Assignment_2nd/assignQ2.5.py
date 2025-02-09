@@ -10,4 +10,4 @@ def linear_search(arr, target):
 if __name__ == "__main__":
     arr = [34, 7, 23, 32, 5, 62]
     print("Original array:", arr)
-    print("Linear Search (find 23):", linear_search(arr, 23))
+    print("Linear Search (find 23):", linear_search(arr, 32))
