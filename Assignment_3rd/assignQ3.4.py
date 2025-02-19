@@ -126,38 +126,44 @@ class Square(Shape):
 
 
 def main():
-    print("\nShape Calculator")
-    print("1. Circle")
-    print("2. Triangle")
-    print("3. Square\n")
-    choice = input("Enter your choice (1/2/3): ")
+    while True:
+        print("\nShape Calculator")
+        print("1. Circle")
+        print("2. Triangle")
+        print("3. Square")
+        print("4. Exit\n")
+        choice = input("Enter your choice (1/2/3/4): ")
 
-    if choice == "1":
-        radius = float(input("Enter the radius of the circle: "))
-        circle = Circle(radius)
-        print(f"\nCircle area: {circle.area()}")
-        print(f"Circle perimeter: {circle.perimeter()}")
-        main()
+        if choice == "1":
+            radius = float(input("Enter the radius of the circle: "))
+            circle = Circle(radius)
+            print(f"\nCircle area: {circle.area()}")
+            print(f"Circle perimeter: {circle.perimeter()}")
+            main()
 
-    elif choice == "2":
-        side1 = float(input("\n Enter the length of the first side of the triangle: "))
-        side2 = float(input("Enter the length of the second side of the triangle: "))
-        side3 = float(input("Enter the length of the third side of the triangle: "))
-        triangle = Triangle(side1, side2, side3)
-        print(f"\nTriangle area: {triangle.area()}")
-        print(f"Triangle perimeter: {triangle.perimeter()}")
-        main()
+        elif choice == "2":
+            side1 = float(input("\n Enter the length of the first side of the triangle: "))
+            side2 = float(input("Enter the length of the second side of the triangle: "))
+            side3 = float(input("Enter the length of the third side of the triangle: "))
+            triangle = Triangle(side1, side2, side3)
+            print(f"\nTriangle area: {triangle.area()}")
+            print(f"Triangle perimeter: {triangle.perimeter()}")
+            main()
 
-    elif choice == "3":
-        side = float(input("\n Enter the length of the side of the square: "))
-        square = Square(side)
-        print(f"\nSquare area: {square.area()}")
-        print(f"Square perimeter: {square.perimeter()}")
-        main()
+        elif choice == "3":
+            side = float(input("\n Enter the length of the side of the square: "))
+            square = Square(side)
+            print(f"\nSquare area: {square.area()}")
+            print(f"Square perimeter: {square.perimeter()}")
+            main()
 
-    else:
-        print("Invalid choice")
-        main()
+        elif choice == "4":
+            print("\nTHANKS FOR USING THIS PROGRAM.PLEASE COME BACK LATER.\n")
+            break
+        
+        else:
+            print("Invalid choice")
+            main()
 
 
 if __name__ == "__main__":

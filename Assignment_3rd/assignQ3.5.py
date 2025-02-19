@@ -114,17 +114,21 @@ def main():
             bank.add_customer(customer_id, name, city, balance)
 
         elif choice == "2":
-            customer_id = input("\nEnter customer ID: ")
+            customer_id = input("\nEnter customer ID to remove: ")
             bank.remove_customer(customer_id)
 
         elif choice == "3":
             customer_id = input("\nEnter customer ID: ")
+            # features : - print current balance here
             amount = float(input("Enter amount to deposit: "))
+            # update : - print confirmations message here
             bank.deposit(customer_id, amount)
 
         elif choice == "4":
             customer_id = input("\nEnter customer ID: ")
+            # features : - print current balance here
             amount = float(input("Enter amount to withdraw: "))
+            # update : - print confirmations message here
             bank.withdraw(customer_id, amount)
 
         elif choice == "5":
