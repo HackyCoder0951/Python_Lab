@@ -19,9 +19,8 @@ class MenuItem:
 
     def display(self):
         # Displays the menu item.
-        print(f"{self.name}: ${self.price:.2f}")
+        print(f"{self.name}: \u20B9{self.price:.2f}")
         print(f"  {self.description}")
-
 
 class RestaurantMenu:
     # Represents a restaurant menu with a list of menu items.
@@ -40,7 +39,7 @@ class RestaurantMenu:
 
     def display_menu(self):
         # Displays the restaurant menu.
-        print("Restaurant Menu:")
+        print("\nRestaurant Menu:")
         for i, item in enumerate(self.menu_items, start=1):
             print(f"\n{i}.")
             item.display()

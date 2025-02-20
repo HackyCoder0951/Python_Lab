@@ -65,7 +65,7 @@ def main():
         print("3. Display minutes")
         print("4. Exit")
 
-        choice = input("Enter your choice (1/2/3/4): ")
+        choice = input("\nEnter your choice (1/2/3/4): ")
 
         if choice == "1":
             hours1 = int(input("Enter hours for time 1: "))
@@ -78,11 +78,11 @@ def main():
 
             print("\nTime 1:")
             time1.display_time()
-            print("Time 2:")
+            print("\nTime 2:")
             time2.display_time()
 
             time3 = time1.add_time(time2)
-            print("Total Time ( T1 + T2 ):")
+            print("\nTotal Time ( T1 + T2 ):")
             time3.display_time()
 
         elif choice == "2":
@@ -90,6 +90,7 @@ def main():
             minutes = int(input("Enter minutes: "))
 
             time = Time(hours, minutes)
+            print("\nEntered Time:")
             time.display_time()
 
         elif choice == "3":
@@ -97,6 +98,7 @@ def main():
             minutes = int(input("Enter minutes: "))
 
             time = Time(hours, minutes)
+            print("\nTotal Minutes:")
             time.display_minutes()
 
         elif choice == "4":
